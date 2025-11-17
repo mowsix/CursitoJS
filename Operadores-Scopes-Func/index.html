@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Operadores, Scopes y Funciones</title>
+
+<style>    
+
+.contenedor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+  gap: 2rem; /* Espacio entre columnas */
+  padding: 1rem;
+}
+
+.seccion {
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+h1{
+    /*centrar el h1*/
+    text-align: center;
+    /*agregar un color de degradado*/
+    color: linear-gradient(to right, #7700ff, #eb3907);
+    color: #bb10e6d2;
+}
+
+.seccion2{
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+h2{
+    text-align: center;
+    color: #bb10e6d2;
+}
+
+button{
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #dc59fdd2;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover{
+    background-color: #780894d2;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+</style>
+
+</head>
+
+<body>
+<Section>
+<h1>Operadores, Scopes y Funciones</h1>
+  <div class="contenedor-grid">
+    <div class="seccion">
+      <h1>Operadores Aritmeticos</h1>
+      <p>Todos los operadores son los tradicionales</p>
+      <p class="operadores">Potencia de 2 elevado a 5 (2**5) es: <span id="potencia25"></span></p>
+      <p class="operadores">modulo de 5 entre 2 (5%2) es: <span id="modulo52"></span></p>
+    </div>
+
+    <div class="seccion">
+      <h1>Abreviaturas</h1>
+      <p>Incremento de 1 unidad (a++): <span id="incremento"></span></p>
+      <p>Decremento de 1 unidad (a--): <span id="decremento"></span></p>
+      <p>Suma de 1 unidad (a+=1): <span id="suma"></span></p>
+      <p>Resta de 1 unidad (a-=1): <span id="resta"></span></p>
+      <p>Multiplicacion de 1 unidad (a*=1): <span id="multiplicacion"></span></p>
+      <p>Division de 1 unidad (a/=1): <span id="division"></span></p>
+    </div>
+
+    <div class="seccion">
+      <h1>Operadores Logicos</h1>
+      <p>AND (&&): <span id="and"></span></p>
+      <p>OR (||): <span id="or"></span></p>
+      <p>NOT (!): <span id="not"></span></p>
+    </div>
+
+    <div class="seccion">
+      <h1>Operadores de Comparacion</h1>
+      <p>Igualdad (==): <span id="igualdad"></span></p>
+      <p>Desigualdad (!=): <span id="desigualdad"></span></p>
+      <p>Igualdad estricta (===): <span id="igualdadEstricta"></span></p>
+      <p>Desigualdad estricta (!==): <span id="desigualdadEstricta"></span></p>
+      <p>Mayor que (>): <span id="mayorQue"></span></p>
+      <p>Menor que (<): <span id="menorQue"></span></p>
+      <p>Mayor o igual que (>=): <span id="mayorOIgualQue"></span></p>
+      <p>Menor o igual que (<=): <span id="menorOIgualQue"></span></p>
+    </div>
+  </div>
+  </Section>
+
+
+<section>
+<h2>Funciones</h2>
+   <div class="contenedor-grid">
+    <div class="seccion2">
+      <h2>Funciones sin parametros</h2>
+      <P>No necesita parametros para funcionar</P>
+      <p>function funcionSinParametros(){ /n
+            alert("Hola mundo");   /n
+        }</p>
+      <button onclick="funcionSinParametros()">Click me</button>
+    </div>
+    <div class="seccion2">
+      <h2>Funciones con parametros</h2>
+      <p>Si necesita parametros para funcionar</p>
+      <p>function funcionConParametros(parametro1, parametro2){
+            alert(parametro1+parametro2);
+        }</p>
+      <button onclick="funcionConParametros('Hola ', 'mundo')">Click me</button>
+    </div>
+    <div class="seccion2">
+      <h2>Funciones con retorno</h2>
+      <p>Si necesita parametros para funcionar</p>
+      <p>function funcionConRetorno(parametro1, parametro2){
+            return parametro1+parametro2;
+        }</p>
+      <button onclick="funcionConRetorno('Hola ', 'mundo')">Click me</button>
+    </div>
+    <div class="seccion2">
+      <h2>Funciones flecha</h2>
+      <p>function funcionFlecha(parametro1, parametro2){
+            return parametro1+parametro2;
+        }</p>
+      <button onclick="funcionFlecha('Hola ', 'mundo')">Click me</button>
+    </div>
+    <div class="seccion2">
+      <h2>Funciones constructora</h2>
+      <p>function funcionConstructora(parametro1, parametro2){
+            return parametro1+parametro2;
+        }</p>
+      <button onclick="funcionConstructora('Hola ', 'mundo')">Click me</button>
+    </div>
+    <div class="seccion2">
+      <h2>Funciones anonimas</h2>
+      <p>function funcionAnonima(parametro1, parametro2){
+            return parametro1+parametro2;
+        }</p>
+      <button onclick="funcionAnonima('Hola ', 'mundo')">Click me</button>
+    </div>
+    <div class="seccion2">
+      <h2>Funciones callback</h2>
+      <p>function funcionCallback(parametro1, parametro2){
+            return parametro1+parametro2;
+        }</p>
+      <button onclick="funcionCallback('Hola ', 'mundo')">Click me</button>
+    </div>
+    <div class="seccion2">
+      <h2>Funciones recursivas</h2>
+       <p>function funcionRecursiva(parametro1, parametro2){
+            return parametro1+parametro2;
+        }</p>
+      <button onclick="funcionRecursiva('Hola ', 'mundo')">Click me</button>
+    </div>
+  </Section>
+</body>
+
+    <script>
+        var a=2;
+        var b=5;
+        var potencia25=a**b;
+        var modulo52=a%b;
+        document.getElementById("potencia25").innerHTML=potencia25;
+        document.getElementById("modulo52").innerHTML=modulo52;
+        document.getElementById("incremento").innerHTML=a++;
+        document.getElementById("decremento").innerHTML=a--;
+        document.getElementById("suma").innerHTML=a+=1;
+        document.getElementById("resta").innerHTML=a-=1;
+        document.getElementById("multiplicacion").innerHTML=a*=1;
+        document.getElementById("division").innerHTML=a/=1;
+        document.getElementById("and").innerHTML=a&&b;
+        document.getElementById("or").innerHTML=a||b;
+        document.getElementById("not").innerHTML=!a;
+        document.getElementById("igualdad").innerHTML=a==b;
+        document.getElementById("desigualdad").innerHTML=a!=b;
+        document.getElementById("igualdadEstricta").innerHTML=a===b;
+        document.getElementById("desigualdadEstricta").innerHTML=a!==b;
+        document.getElementById("mayorQue").innerHTML=a>b;
+        document.getElementById("menorQue").innerHTML=a<b;
+        document.getElementById("mayorOIgualQue").innerHTML=a>=b;
+        document.getElementById("menorOIgualQue").innerHTML=a<=b;
+        document.getElementById("igualdadEstricta").innerHTML=a===b;
+        document.getElementById("desigualdadEstricta").innerHTML=a!==b;
+
+        /*Funciones
+        function funcionSinParametros(){
+            alert("Hola mundo");
+        }
+        funcionSinParametros();
+
+        function funcionConParametros(parametro1, parametro2){
+            alert(parametro1+parametro2);
+        }
+        funcionConParametros("Hola ", "mundo");
+
+        function funcionConRetorno(parametro1, parametro2){
+            return parametro1+parametro2;
+        }
+        var resultado=funcionConRetorno("Hola ", "mundo");
+        alert(resultado);   
+
+        function funcionFlecha(parametro1, parametro2){
+            return parametro1+parametro2;
+        }
+
+        var resultado=funcionFlecha("Hola ", "mundo");
+        alert(resultado);   
+
+        function funcionConstructora(parametro1, parametro2){
+            return parametro1+parametro2;
+        }
+
+        var resultado=funcionConstructora("Hola ", "mundo");
+        alert(resultado);   
+
+        function funcionAnonima(parametro1, parametro2){
+            return parametro1+parametro2;
+        }
+
+        var resultado=funcionAnonima("Hola ", "mundo");
+        alert(resultado);   
+
+        function funcionCallback(parametro1, parametro2){
+            return parametro1+parametro2;
+        }
+
+        var resultado=funcionCallback("Hola ", "mundo");
+        alert(resultado);   
+
+        function funcionRecursiva(parametro1, parametro2){
+            return parametro1+parametro2;
+        }
+
+        var resultado=funcionRecursiva("Hola ", "mundo");
+        alert(resultado);   
+*/
+
+    </script>
+</html>
