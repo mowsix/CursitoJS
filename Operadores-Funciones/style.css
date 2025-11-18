@@ -1,0 +1,54 @@
+
+.contenedor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+  gap: 2rem; /* Espacio entre columnas */
+  padding: 1rem;
+}
+
+.seccion {
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+h1{
+    /*centrar el h1*/
+    text-align: center;
+    /*agregar un color de degradado*/
+    color: linear-gradient(to right, #7700ff, #eb3907);
+    color: #bb10e6d2;
+}
+
+.seccion2{
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+h2{
+    text-align: center;
+    color: #bb10e6d2;
+}
+
+button{
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #dc59fdd2;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover{
+    background-color: #780894d2;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
