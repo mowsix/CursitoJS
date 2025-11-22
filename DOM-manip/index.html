@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+    <style>
+        .lista{
+            list-style-type: none; /* Quitar los puntos */
+            padding: 20px; /* Quitar el padding */
+            margin: 0; /* Quitar el margin */
+            width: 300px;
+        }
+
+        .lista li{
+            background: skyblue;
+            padding: 7px 10px;
+            color:  white;
+            cursor: pointer;
+            border: 2px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+
+    <ul class="lista">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <script>
+
+        var contenedorLista = document.querySelector(".lista");
+        var listaItem1 = document.querySelector(".lista li:nth-child(1)");
+        var contador = 0;
+
+        
+        contenedorLista.addEventListener("click", () => {
+            contenedorLista.style.backgroundColor = "red";
+        });
+
+        contenedorLista.addEventListener("mouseover", () => {
+            contenedorLista.style.backgroundColor = "black";
+        });
+
+        listaItem1.addEventListener("click", () => {
+            setInterval(() => {
+                listaItem1.innerText = contador;
+                contador++;
+            }, 1000);
+        })
+
+        contenedorLista.addEventListener("click", () => {
+            let nuevoElemento = document.createElement("li");
+            nuevoElemento.innerText = "nuevo Item 4";
+            contenedorLista.appendChild(nuevoElemento);
+        })
+        
+    </script>
+</body>
+</html>
